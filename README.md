@@ -1,6 +1,6 @@
 # Multiplication of two matrices in Scala language
 Recently I took Linear Algebra class on [MIT open course-wares](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/) and since I really like Scala I've tried to write some of the matrix operations with Scala.
-This is multiplication of two matrix in Scala
+This is multiplication of two matrices in Scala
 
 ## prerequisites
 You need to have [JDK](https://openjdk.java.net/install/) 8 or higher and [SBT](https://www.scala-sbt.org/index.html) build tool installed on your machine
@@ -45,7 +45,7 @@ run # run project
 
 then you must have the output as follow:
 
-````
+```
 Multiplication of Matrix by Matrix:
 
 109, 124, 139, 154, 169
