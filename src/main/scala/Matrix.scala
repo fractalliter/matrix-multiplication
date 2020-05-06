@@ -14,6 +14,7 @@ case class Matrix(A: Vector[Vector[Int]], B: Vector[Vector[Int]]) {
       Vector()
     }
   }
+
   /**
    * Product of the two matrix by multiplying first matrix rows
    */
@@ -24,7 +25,10 @@ case class Matrix(A: Vector[Vector[Int]], B: Vector[Vector[Int]]) {
     mat.toVector.transpose
   }
 
+  /**
+   * Product of a scalar by a Matrix
+   */
   def mulScalar(x: Int): Matrix = A.map(_.map(_*x))
 
-  def display(x: Matrix) = print(x.map(_.mkString(", ")).mkString("\n"))
+  def display(x: Matrix): Unit = print(x.map(_.mkString(", ")).mkString("\n"))
 }

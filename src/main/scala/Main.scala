@@ -18,13 +18,20 @@ object Main {
       Vector(11, 12, 13, 14, 15)
     )
 
-    println(C.transpose)
-    println("Multiplication of Matrix by Matrix:\n")
     val mat = Matrix(A, C)
-    mat.display(mat.mulMatrix())
+
+    println("Transpose of matrix C:\n")
+    mat display C.transpose
+
     println("\n\n")
+
+    println("Multiplication of Matrix by Matrix:\n")
+    mat display mat.mulMatrix
+
+    println("\n\n")
+
     println("Multiplication of Matrix by its transpose:\n")
     val tr = Matrix(A, A.transpose)
-    tr.display(tr.mulMatrix())
+    tr display tr.mulMatrix
   }
 }
