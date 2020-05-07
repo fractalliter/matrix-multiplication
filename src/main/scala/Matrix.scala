@@ -5,30 +5,26 @@ case class Matrix(A: Vector[Vector[Int]], B: Vector[Vector[Int]]) {
   private def multipliable(mat: Matrix, row: Row): Boolean = mat.forall(_.length == row.length)
 
   private def mulVector(mat: Matrix, rw: Row): Row = {
-    if (multipliable(mat, rw)) {
-      val row = for{i <- mat.indices}
-        yield for{j <- rw.indices} yield rw(j) * mat(i)(j)
-      row.map(_.sum).toVector
-    }
-    else{
-      Vector()
-    }
+    assert(multipliable(mat, rw), "Can not multiply the matrices")
+    val row = for {i <- mat.indices}
+      yield for {j <- rw.indices} yield rw(j) * mat(i)(j)
+    row.map(_.sum).toVector
   }
 
   /**
-   * Product of the two matrix by multiplying first matrix rows
+   * Product of the two matrices by multiplying first matrix rows
    */
   def mulMatrix(): Matrix = {
     val tr = B.transpose
-    val mat = for{i <- A.indices}
+    val mat = for {i <- A.indices}
       yield mulVector(A, tr(i))
     mat.toVector.transpose
   }
 
   /**
-   * Product of a scalar by a Matrix
+   * Product of a scalar by a matrix
    */
-  def mulScalar(x: Int): Matrix = A.map(_.map(_*x))
+  def mulScalar(x: Int): Matrix = A.map(_.map(_ * x))
 
   def display(x: Matrix): Unit = print(x.map(_.mkString(", ")).mkString("\n"))
 }

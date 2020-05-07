@@ -18,20 +18,26 @@ object Main {
       Vector(11, 12, 13, 14, 15)
     )
 
-    val mat = Matrix(A, C)
+    try {
+      val mat = Matrix(A, C)
 
-    println("Transpose of matrix C:\n")
-    mat display C.transpose
+      println("Transpose of matrix C:\n")
+      mat display C.transpose
 
-    println("\n\n")
+      println("\n\n")
 
-    println("Multiplication of Matrix by Matrix:\n")
-    mat display mat.mulMatrix
+      println("Multiplication of Matrix by Matrix:\n")
+      mat display mat.mulMatrix
 
-    println("\n\n")
+      println("\n\n")
 
-    println("Multiplication of Matrix by its transpose:\n")
-    val tr = Matrix(A, A.transpose)
-    tr display tr.mulMatrix
+      println("Multiplication of Matrix by its transpose:\n")
+      val tr = Matrix(A, A.transpose)
+      tr display tr.mulMatrix
+    } catch {
+      case e: AssertionError => println(e
+        + "\nCheck for multiplication of matrices\nPlease provide multiply able matrices")
+      case _: Throwable => println("An error occurred")
+    }
   }
 }
