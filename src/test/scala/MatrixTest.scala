@@ -19,7 +19,7 @@ class MatrixTest extends FunSuite {
     Vector(11, 12, 13, 14, 15)
   )
 
-  val mat = Matrix(A, C)
+  val mat: Matrix = Matrix(A, C)
 
   test("Multiplication of Scalar") {
     assert(mat.mulScalar(4) === Vector(
@@ -31,6 +31,10 @@ class MatrixTest extends FunSuite {
     ))
   }
   test("Multiplication of Matrices") {
+    intercept[AssertionError] {
+      val matFail = Matrix(A.map(_.dropRight(1)), C)
+      matFail.mulMatrix()
+    }
     assert(
       mat.mulMatrix() === Vector(
         Vector(109, 124, 139, 154, 169),
