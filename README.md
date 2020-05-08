@@ -54,15 +54,13 @@ Transpose of matrix C:
 4, 6, 8, 11, 14
 5, 7, 9, 12, 15
 
-
-Multiplication of Matrix by Matrix:
+Multiplication of two matrices:
 
 109, 124, 139, 154, 169
 193, 223, 253, 283, 313
 333, 388, 443, 498, 553
 333, 388, 443, 498, 553
 473, 553, 633, 713, 793
-
 
 Multiplication of Matrix by its transpose:
 
@@ -71,4 +69,12 @@ Multiplication of Matrix by its transpose:
 175, 340, 615, 615, 890
 175, 340, 615, 615, 890
 250, 490, 890, 890, 1290
+
+Multiplication of a Matrix by a Scalar
+
+4, 8, 12, 16, 20
+16, 20, 24, 28, 32
+36, 40, 44, 48, 52
+36, 40, 44, 48, 52
+56, 60, 64, 68, 72
 ```
