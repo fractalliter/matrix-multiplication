@@ -24,7 +24,11 @@ case class Matrix(A: Vector[Vector[Int]], B: Vector[Vector[Int]]) {
   /**
    * Product of a scalar by a matrix
    */
-  def mulScalar(x: Int): Matrix = A.map(_.map(_ * x))
+  def mulMatrix(x: Int): Matrix = A.map(_.map(_ * x))
 
   def display(x: Matrix): Unit = print(x.map(_.mkString(", ")).mkString("\n"))
+}
+
+object Matrix {
+  def apply(A: Vector[Vector[Int]]): Matrix = Matrix(A, Vector(Vector()))
 }
