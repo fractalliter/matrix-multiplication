@@ -1,0 +1,1 @@
+scalac -bootclasspath /home/elias/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.2/scala-library-2.13.2.jar -classpath /home/elias/codebase/matrix-multiplication/target/scala-2.13/classes /home/elias/codebase/matrix-multiplication/src/main/scala/Matrix.scala /home/elias/codebase/matrix-multiplication/src/main/scala/Main.scala
